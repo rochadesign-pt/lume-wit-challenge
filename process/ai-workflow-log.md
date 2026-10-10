@@ -176,3 +176,8 @@ Checked by script across all 14 pages and by running the published prototype in 
 - Review: the Segment had no padding of its own (fixed 72×52) and the selected shadow was cropped by fixed sizes and a clipping component set. Segment now pads space/8 × space/12, hugs its height and fills the width in the control; nothing in the chain clips. CSS and README updated to match (padding tokens instead of a fixed height). The same pass caught the Comfortable Live Summary at 4px bottom padding (a leftover from the hidden note), so it now matches Tight at 20. All 8 thumbnails of 04b re-cloned.
 
 - Submission: hours set to 7 (slide 2, README). Repository published publicly at github.com/rochadesign-pt/lume-wit-challenge and linked from slide 2 and the cover.
+
+## 27. Voice-first and a plan that explains itself (AI draft → v1.0)
+- The "Understanding" comparison now shows what v1.0 actually does on the way in: the voice widget with the live transcript (01b). The AI draft was a chat box that asked "when are you travelling?" before any numbers. Rationale: most assistants today are chat windows; voice is arriving fast, and for money it removes the hardest part, knowing what to type or which feature to open. Lume then turns what it heard into an editable intent with its assumptions visible.
+- The AI draft of "Adjust · Tight" had no explanation: the meter turned amber and nothing said why. v1.0 adds the Lume note (the trade-off in plain words plus a way back, "Keep June instead"), so the state change is explained, not just coloured. The comparison now shows the draft without it.
+- Section intro updated: the biggest changes are behaviour, not colour (voice-first input, assumptions shown instead of asked, a plan that explains itself).

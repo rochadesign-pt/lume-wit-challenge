@@ -6,6 +6,8 @@ WIT Software · AI-Assisted Design Challenge
 
 Lume turns that sentence into a plan the person can see, shape and approve. Lume proposes, the maths is always visible, conversation and controls edit the same plan, and nothing moves without explicit approval.
 
+Voice comes first: most assistants today are chat windows, and speaking removes the hardest part of banking, knowing what to type or which feature to open. Lume shows what it hears, turns it into an editable intent with its assumptions visible, and explains every trade-off before anything moves.
+
 ## Start here
 | | Link |
 |---|---|
