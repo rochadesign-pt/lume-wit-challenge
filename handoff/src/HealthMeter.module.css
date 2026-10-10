@@ -1,0 +1,74 @@
+/* Every value maps to a Figma variable or style — see tokens.css (generated from Figma).
+   Typography comes from the .lume-type-* utility classes applied in HealthMeter.tsx.
+   Layout mirrors the component's Auto Layout: vertical stack, gap 16 / row gap 8 / bar gap 4. */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lume-space-16);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--lume-space-8);
+}
+
+.label {
+  flex: 1;
+  color: var(--lume-text-secondary);
+}
+
+.value {
+  color: var(--lume-text-primary);
+}
+
+.badge {
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--lume-space-12) 0 var(--lume-space-8);
+  border-radius: var(--lume-radius-full);
+}
+
+.bar {
+  display: flex;
+  gap: var(--lume-space-4);
+  height: 8px;
+}
+
+.committed,
+.rest {
+  border-radius: 4px;
+  transition: flex-basis 350ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Committed money uses the same colour as "Bills & rent" in the Cashflow card. */
+.committed {
+  flex-shrink: 0;
+  background: var(--lume-chart-fixed);
+}
+
+/* Within budget: what stays free. Over budget: the shortfall. */
+.rest {
+  flex: 1;
+}
+
+.caption {
+  margin: 0;
+  color: var(--lume-text-tertiary);
+}
+
+/* State → token mapping (Figma variant "State") */
+[data-state="comfortable"] .badge { background: var(--lume-bg-positive-subtle); color: var(--lume-text-positive); }
+[data-state="comfortable"] .rest { background: var(--lume-status-positive); }
+
+[data-state="tight"] .badge { background: var(--lume-bg-caution-subtle); color: var(--lume-text-caution); }
+[data-state="tight"] .rest { background: var(--lume-status-caution); }
+
+[data-state="at-risk"] .badge { background: var(--lume-bg-negative-subtle); color: var(--lume-text-negative); }
+[data-state="at-risk"] .rest { background: var(--lume-status-negative); }
+
+@media (prefers-reduced-motion: reduce) {
+  .committed, .rest { transition: none; }
+}
